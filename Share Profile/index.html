@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/42a2da088a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        
+        <!-- Main Body -->
+        <div class="main">
+            <img src="assets/heroImg.jpg" alt="">
+
+            <div class="details">
+                <h2 class="name">Vivek Kumar Gupta</h2>
+                <p class="designation">Web Developer</p>
+            </div>
+
+            <div class="cta-buttons">
+                <button id="share-btn">
+                    <i class="fa-solid fa-share"></i>
+                    <span class="btn-text">Share My Profile</span>
+                </button>
+                <button>Follow</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal">
+            <div class="header">
+                <h2>Share my Profile</h2>
+                <button class="close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <p>Share profile via</p>
+
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="assets/facebookIcon.svg" alt="">
+                </div>
+                <div class="icons">
+                    <img src="assets/instagramIcon.svg" alt="">
+                </div>
+                <div class="icons">
+                    <img src="assets/telegramIcon.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
