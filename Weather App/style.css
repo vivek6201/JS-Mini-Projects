@@ -1,0 +1,11 @@
+.tabContainer > p{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activeTab{
+    background-color: grey;
+    transition: all 0.3s ease-in-out;
+}
