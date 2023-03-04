@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div
+        class="w-full h-screen flex place-content-center place-items-center flex-col bg-gradient-to-r from-red-800 to-orange-500 gap-y-10">
+        <h2 class="text-4xl font-bold text-rose-300">Password Generator</h2>
+
+        <div class="flex flex-col gap-y-5 w-[20rem]">
+            <div class="flex justify-between w-full rounded-md px-5 py-4 bg-orange-800 bg-opacity-80 shadow-inner">
+                <input readonly id="displayPass" placeholder="Password" class="bg-transparent text-rose-200 outline-none" >
+                <div id="copyPass" class="text-rose-400 cursor-pointer relative flex justify-center items-center">
+                    <span id="copyTxt"></span>
+                    <i class="fa-solid fa-copy"></i>
+                </div>
+            </div>
+
+            <div class="flex flex-col bg-orange-800 px-5 py-4 rounded-md gap-y-5 text-rose-300 shadow-inner">
+                <div class="flex justify-between ">
+                    <p>Password Length</p>
+                    <span data-passLen class="text-amber-100"></span>
+                </div>
+
+                <input type="range" id="inputSlider" min="1" max="20" step="1" class="slider-thumb slider-track">
+
+
+                <div>
+                    <div>
+                        <input type="checkbox" id="uppercase">
+                        <label for="uppercase">Include Uppercase Character</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Include Lowercase Character</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="numbers">
+                        <label for="numbers">Include Numbers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Include Symbols</label>
+                    </div>
+                </div>
+
+                <button id="generatePass" class="bg-red-900 py-3 rounded-md text-amber-500 hover:shadow-lg transition-all duration-200">Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/42a2da088a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
