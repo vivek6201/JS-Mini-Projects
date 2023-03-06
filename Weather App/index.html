@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,68 +8,68 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="wrapper">
+        <div class="Container">
+            <!-- Heading -->
+            <div class="heading">
+                <h1>Weather App</h1>
+            </div>
 
-        <!-- Heading -->
-        <div class="heading">
-            <h1>Weather App</h1>
+            <!--Tabs Container  -->
+            <div class="tabContainer">
+                <p class="tabs myWeather">Your Weather</p>
+                <p class="tabs">Search a Weather</p>
+            </div>
+
+            <div class="weather-component">
+                <!-- search bar -->
+                <form class="searchBar">
+                    <input type="text" placeholder="search..." class="searchInput">
+                    <button class="search-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <!-- Show Weather -->
+                <div class="showWeather">
+                    <h2 class="cityName"></h2>
+                    <p class="weatherState"></p>
+                    <img class="weatherImg">
+                    <h3 class="weatherTemp"></h3>
+
+                    <ul class="weatherDesc">
+                        <li class="windspeed descItem">
+                            <h3>Windspeed</h3>
+                            <p class="wind-data"></p>
+                        </li>
+                        <li class="humidity descItem">
+                            <h3>Humidity</h3>
+                            <p class="humidity-data"></p>
+                        </li>
+                        <li class="clouds descItem">
+                            <h3>Clouds</h3>
+                            <p class="cloud-data"></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Grant Access -->
+                <div class="grant-access">
+                    <i class="fa-solid fa-location-dot" id="location-img"></i>
+                    <h2>Grant Location Access</h2>
+                    <p>This is required to fetch your current location.</p>
+                    <button class="grantBtn">Grant Access</button>
+                </div>
+            </div>
+
         </div>
-
-        <!--Tabs Container  -->
-        <div class="tabContainer">
-            <p class="tabs myWeather">Your Weather</p>
-            <p class="tabs">Search a Weather</p>
-        </div>
-
-        <!-- search bar -->
-        <form class="search-bar">
-            <input type="text" placeholder="search..." class="searchInput">
-            <button class="search-btn" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        
-        <!-- Show Weather -->
-        <div class="showWeather">
-            <h2 class="cityName"></h2>
-            <p class="weatherState"></p>
-            <img class="weatherImg">
-            <h3 class="weatherTemp"></h3>
-
-            <ul class="weatherDesc">
-                <li class="windspeed descItem">
-                    <h3>Windspeed</h3>
-                    <p class="wind-data"></p>
-                </li>
-                <li class="humidity descItem">
-                    <h3>Humidity</h3>
-                    <p class="humidity-data"></p>
-                </li>
-                <li class="clouds descItem">
-                    <h3>Clouds</h3>
-                    <p class="cloud-data"></p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Grant Access -->
-        <div class="grant-access">
-            <i class="fa-solid fa-location-dot" id="location-img"></i>
-            <h2>Grant Location Access</h2>
-            <p>This is required to fetch your current location.</p>
-            <button class="grantBtn">Grant Access</button>
-        </div>
-
-        <!-- error content
-        <div class="render-error">
-            <img src="" alt="">
-            <p>City Not found</p>
-        </div> -->
 
     </div>
 
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/42a2da088a.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

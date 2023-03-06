@@ -1,11 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(to right,magenta, purple);
+    font-family: 'Golos Text', sans-serif;
+}
+
+.Container{
+    width: 75%;
+    margin: auto;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    place-content: space-evenly;
+    place-items: center;
+    row-gap: 1rem;
+}
+
+.heading > h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgb(0, 255, 204), rgb(230, 230, 38));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tabContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+ 
 .tabContainer > p{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    color: white;
+    padding: 0.5rem 2rem;
+    z-index: 1;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .activeTab{
-    background-color: grey;
+    background-color: #c57ef0;
     transition: all 0.3s ease-in-out;
+    border-radius: 0.8rem;
+    color: magenta;
+    opacity: 0.8;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.weather-component{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBar{
+    width: 100%;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.searchBar .searchInput{
+    width: 50%;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    background-color: #6EE9F0;
+    border-radius: 10px;
+    color: darkmagenta;
+}
+
+.searchBar .search-btn {
+    display: flex;
+    padding: 1rem;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    background-color: #6EE9F0;
+}
+
+.showWeather{
+    margin-top: 2rem;
+    border-radius: 0.7rem;
+    align-items: center;
+    color: white;
+    row-gap: 1rem;
+    flex-direction: column;
+}
+
+.showWeather h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgb(0, 255, 204), rgb(230, 230, 38));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showWeather .weatherState{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #75f2f9;
+}
+
+.showWeather .weatherTemp{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #75f2f9;
+}
+
+.showWeather .weatherDesc{
+    display: flex;
+    list-style: none;
+    column-gap: 1rem;
+}
+
+.showWeather .weatherDesc .descItem{
+    width: 8rem;
+    height: 10rem;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.grant-access{
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    place-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.grant-access #location-img{
+    color: #75f2f9;
+    font-size: 4rem;
+}
+
+.grant-access h2{
+    background: linear-gradient(to right, rgb(0, 255, 204), rgb(230, 230, 38));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grant-access p{
+    color: #75f2f9;
+}
+
+.grant-access .grantBtn{
+    padding: 0.4rem 1.8rem;
+    background-color: #c57ef0;
+    color: #75f2f9;
+    border-radius: 0.7rem;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.grant-access .grantBtn:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

@@ -7,7 +7,7 @@ const grantAccessContainer = document.querySelector(".grant-access");
 const grantBtn = document.querySelector(".grantBtn")
 const searchInput = document.querySelector(".searchInput");
 const searchBtn = document.querySelector(".search-btn");
-const searchContainer = document.querySelector(".search-bar");
+const searchContainer = document.querySelector(".searchBar");
 const renderError = document.querySelector(".render-error");
 
 //default Tab
@@ -26,7 +26,7 @@ tabs.forEach((tab) => {
 function sessionStorageChecker() {
     const localCoordinates = sessionStorage.getItem("user-coordinates");
     if (!localCoordinates) {
-        grantAccessContainer.style.display = "block";
+        grantAccessContainer.style.display = "flex";
         showWeather.style.display = "none";
     }
     else {
@@ -44,7 +44,7 @@ function switchTabs(currentTab) {
         sessionStorageChecker();
     }
     else {
-        searchContainer.style.display = "block";
+        searchContainer.style.display = "flex";
     }
 }
 
@@ -77,7 +77,7 @@ async function fetchUserWeather(userCoordinates) {
 
         const data = await response.json();
         renderWeather(data);
-        showWeather.style.display = "block";
+        showWeather.style.display = "flex";
     }
     catch (err) {
         console.log("cannot fetch data",err);
@@ -91,7 +91,7 @@ async function fetchSearchWeather(city) {
 
         const data = await response.json();
         renderWeather(data);
-        showWeather.style.display = "block";
+        showWeather.style.display = "flex";
     }
     catch (err) {
         console.log(`Error Occurred ${err}`);
@@ -125,4 +125,5 @@ searchBtn.addEventListener("click", (e) => {
 
     if (cityName === "") return;
     fetchSearchWeather(cityName);
+    searchInput.value = "";
 })
