@@ -8,7 +8,7 @@ const grantBtn = document.querySelector(".grantBtn")
 const searchInput = document.querySelector(".searchInput");
 const searchBtn = document.querySelector(".search-btn");
 const searchContainer = document.querySelector(".searchBar");
-const renderError = document.querySelector(".render-error");
+const errorContainer = document.querySelector(".error-container");
 
 //default Tab
 switchTabs(tabs[0]);
@@ -78,20 +78,28 @@ async function fetchUserWeather(userCoordinates) {
         const data = await response.json();
         renderWeather(data);
         showWeather.style.display = "flex";
+        errorContainer.classList.remove("active");
     }
     catch (err) {
-        console.log("cannot fetch data",err);
+        console.log("cannot fetch data", err);
     }
 }
 
 //Fetch search weather 
 async function fetchSearchWeather(city) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`)
-
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
         const data = await response.json();
-        renderWeather(data);
-        showWeather.style.display = "flex";
+        if (response.statusText !== "OK") {
+            errorContainer.classList.add("active");
+            showWeather.style.display = "none";
+        }
+        else {
+            errorContainer.classList.remove("active");
+            renderWeather(data);
+            showWeather.style.display = "flex";
+        }
+
     }
     catch (err) {
         console.log(`Error Occurred ${err}`);
@@ -112,9 +120,9 @@ function renderWeather(data) {
     weatherState.innerHTML = data?.current?.condition?.text;
     weatherImg.src = data?.current?.condition?.icon;
     weatherTemp.innerHTML = `${data?.current?.temp_c} °C`;
-    windSpeed.innerHTML = data?.current?.wind_kph.toFixed(2);
-    humidity.innerHTML = data?.current?.humidity;
-    clouds.innerHTML = data?.current?.cloud;
+    windSpeed.innerHTML = `${data?.current?.wind_kph.toFixed(2)} Km/Hr`;
+    humidity.innerHTML = `${data?.current?.humidity} %`;
+    clouds.innerHTML = `${data?.current?.cloud} %`;
 }
 
 grantBtn.addEventListener("click", getLocation);
