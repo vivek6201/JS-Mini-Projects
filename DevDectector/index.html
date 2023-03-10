@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container">
+            <div class="header">
+                <h1 class="title">DevDetector</h1>
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Enter Your Github Username" id="search-input">
+                <button id="search-btn">Search</button>
+            </div>
+
+            <div class="main">
+                <div class="top">
+                    <div class="left child">
+                        <img id="avatarImg">
+                    </div>
+                    <div class="right child">
+                        <p class="rightChild" id="name"></p>
+                        <p class="rightChild" id="username"></p>
+                        <p class=" rightChild" id="bio"></p>
+                        <p class="rightChild" id="followers"></p>
+                        <p class="rightChild" id="following"></p>
+                        <p class="rightChild" id="public-repos"></p>
+                        <a id="visit-profile" target="_blank">
+                            <button class="rightChild" >Visit Profile</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p><a class="other-details" id="twitter"></a></p> | 
+                    <p class="other-details" id="company"></p> | 
+                    <p class="other-details" id="email"></p> | 
+                    <p class="other-details" id="location"></p>
+                </div>
+            </div>
+
+            <div class="not-found">
+                <p>Profile Does not Exist</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/42a2da088a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
