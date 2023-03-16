@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background:radial-gradient(circle farthest-corner at top right, #e94e4e 19%, #a067a8 100%);
+}
+
+.container{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    font-family: 'Nunito', sans-serif;
+    gap: 1rem 0;
+    position: relative;
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: rgb(218, 214, 214);
+    text-transform: uppercase;
+}
+
+.input-bar{
+    width: 75%;
+    border-radius: 0.8rem;
+    padding: 0 1rem;
+    background-color:rgba(125, 28, 28, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#enter-task{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 80%;
+    padding: 1.5rem 2rem;
+    font-size: 16.5px;
+    color: white;
+}
+
+#enter-task::placeholder{
+    color: rgb(202, 196, 196);
+}
+
+#add-task-btn{
+    background: rgb(129, 13, 13, 0.3);
+    border: none;
+    outline: none;
+    color: rgb(216, 212, 212);
+    cursor: pointer;
+    padding: .8rem 1rem;
+    border-radius: 0.3rem;
+}
+
+.task-container{
+    margin-top: 1rem;
+    width: 80%;
+    background-color:rgba(125, 28, 28, 0.2);
+    border-radius: 0.8rem;
+    height: 22rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    transition: all 0.3s linear;
+}
+
+#reset{
+    background-color:rgba(125, 28, 28, 0.2);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    bottom: 1rem;
+    right: 7rem;
+    border: none;
+    outline: none;
+    border-radius: 0.8rem;
+    color: rgb(230, 223, 223);
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+#reset:hover{
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+.taskDiv{
+    width: 20%;
+    aspect-ratio: 1/1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    max-height: 10rem;
+    background-color: rgba(223, 16, 216, 0.504);
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.delete-task{
+    padding: 1rem 2rem;
+    border: 1px solid rgb(235, 136, 136);
+    outline: none;
+    background-color: rgb(82, 30, 30,0.3);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.task-para{
+    font-size: 18px;
+}
